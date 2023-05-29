@@ -17,9 +17,11 @@ Wallu es un robot manipulador y móvil diseñado para la selección de objetos r
 
 ## Contenido del Repositorio
 
-- `proyecto_wallu.py`: Archivo Python que contiene la implementación del robot Wallu y sus componentes.
-- `wallu.py`: Directorio que contiene la documentación del proyecto.
+- `proyecto_wallu.py`: Archivo principal que contiene las clases e implementación del robot Wallu y sus componentes.
+- `wallu.py`: Archivo de interfaz de usuario donde se pueden visualizar distintos estados del robot, así como iniciar y detener su funcionamiento.
 - `main.py`: Directorio que contiene ejemplos de uso y scripts relacionados.
+- `RobotStateMachi.py`: Archivo de Código de la máquina de estados.
+- `requirements.txt`
 
 ## Uso
 
@@ -28,4 +30,5 @@ Wallu es un robot manipulador y móvil diseñado para la selección de objetos r
 
 # Files to be imported as additional source code  
 
-- `robotClasses.py` This is a file with the [Class Diagram](https://app.genmymodel.com/api/projects/_K0Sx4P0bEe2JlLbgf0QSMg/diagrams/_K0Sx4_0bEe2JlLbgf0QSMg/svg)
+- `Proyecto Wallu.py` [Class Diagram](https://app.genmymodel.com/api/projects/_K0Sx4P0bEe2JlLbgf0QSMg/diagrams/_K0Sx4_0bEe2JlLbgf0QSMg/svg)
+- `Diagrama UML de la máquina de estados del robot`  [RobotStateMachine](https://app.genmymodel.com/api/projects/_UNeHUP2VEe2JlLbgf0QSMg/diagrams/_UNeHU_2VEe2JlLbgf0QSMg/svg)
