@@ -1,0 +1,60 @@
+﻿Documento de Análisis de Casos de Uso
+1. Introducción:
+Este documento tiene como objetivo analizar los casos de uso del sistema representado en el diagrama de clases proporcionado. Se describen las interacciones entre los actores y las funcionalidades del sistema.
+2. Actores:
+* Usuario: Persona que interactúa con el sistema y utiliza las funcionalidades del RobotStory.
+3. Casos de Uso:
+3.1 Iniciar Exploración
+* Descripción: Este caso de uso representa el inicio de la exploración del robot en busca de objetos reciclables/reusables.
+* Actores involucrados: Usuario, RobotStory.
+* Flujo principal de eventos:
+   1. El usuario inicia el caso de uso.
+   2. El RobotStory llama al método startExploration().
+   3. El RobotStory parte desde su posición inicial "home" y comienza a explorar el terreno.
+3.2 Encontrar Objeto
+* Descripción: Este caso de uso representa el proceso de encontrar un objeto durante la exploración.
+* Actores involucrados: Usuario, RobotStory.
+* Flujo principal de eventos:
+   1. El RobotStory llama al método findObject().
+   2. El RobotStory utiliza su cámara para capturar una imagen del entorno.
+   3. El RobotStory ajusta la trayectoria de su cámara llamando al método adjustCamera().
+   4. El RobotStory utiliza su AI para determinar la presencia y categoría del objeto llamando al método determineObjectLocation().
+3.3 Moverse hacia el Objeto
+* Descripción: Este caso de uso representa el movimiento del robot hacia un objeto encontrado.
+* Actores involucrados: Usuario, RobotStory.
+* Flujo principal de eventos:
+   1. El RobotStory llama al método moveToObject().
+   2. El RobotStory utiliza su sistema de navegación para calcular la ruta hacia el objeto llamando al método calculatePath().
+   3. El RobotStory sigue la ruta calculada llamando al método followPath() del sistema de navegación.
+3.4 Agarrar Objeto
+* Descripción: Este caso de uso representa el proceso de agarrar un objeto encontrado.
+* Actores involucrados: Usuario, RobotStory.
+* Flujo principal de eventos:
+   1. El RobotStory llama al método grabObject().
+   2. El RobotStory ajusta la posición y orientación de su garra llamando al método moveArmTo() del brazo.
+   3. El RobotStory mide la distancia al objeto llamando al método getDistance() del gripper.
+   4. El RobotStory abre la garra llamando al método open() del gripper.
+   5. El RobotStory se acerca al objeto y cierra la garra llamando al método close() del gripper para agarrar el objeto.
+3.5 Depositar Objeto
+* Descripción: Este caso de uso representa el proceso de depositar un objeto en el contenedor correspondiente.
+* Actores involucrados: Usuario, RobotStory.
+* Flujo principal de eventos:
+   1. El RobotStory llama al método depositObject().
+   2. El RobotStory se mueve hacia la posición del contenedor llamando al método setPosition() del contenedor.
+   3. El RobotStory deposita el objeto en el contenedor correspondiente llamando al método setCurrentCategory() del contenedor.
+3.6 Volver a Home
+* Descripción: Este caso de uso representa el retorno del robot a su posición inicial "home" después de completar una exploración.
+* Actores involucrados: Usuario, RobotStory.
+* Flujo principal de eventos:
+   1. El RobotStory llama al método returnHome().
+   2. El RobotStory utiliza su sistema de navegación para calcular la ruta hacia la posición "home" llamando al método calculatePath().
+   3. El RobotStory sigue la ruta calculada llamando al método followPath() del sistema de navegación.
+3.7 Moverse
+* Descripción: Este caso de uso representa el movimiento del robot a una nueva zona de exploración, al contenedor, a una zona de recarga o de estacionamiento.
+* Actores involucrados: Usuario, RobotStory.
+* Flujo principal de eventos:
+   1. El RobotStory llama al método move().
+   2. El RobotStory utiliza su sistema de navegación para calcular la ruta hacia la ubicación deseada llamando al método calculatePath().
+   3. El RobotStory sigue la ruta calculada llamando al método followPath() del sistema de navegación.
+4. Conclusiones:
+El análisis de los casos de uso del RobotStory ha permitido identificar las principales interacciones entre los actores y el sistema. Estos casos de uso son fundamentales para comprender y diseñar las funcionalidades del sistema, asegurando que se cumplan los requisitos del usuario.
